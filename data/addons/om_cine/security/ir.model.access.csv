@@ -1,3 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 om_cine_site,access.om_cine.site,model_om_cine_site,,1,1,1,1
 om_cine_salle,access.om_cine.salle,model_om_cine_salle,,1,1,1,1
+om_cine_site_public,access.om_cine.site,model_om_cine_site,,1,0,0,0
+om_cine_salle_public,access.om_cine.salle,model_om_cine_salle,,1,0,0,0
+om_cine_film,access.om_cine.film,model_om_cine_film,,1,1,1,1
+om_cine_seance,access.om_cine.seance,model_om_cine_seance,,1,1,1,1

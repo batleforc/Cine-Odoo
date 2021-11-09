@@ -1,3 +1,4 @@
 data/bdd
 data/libodoo/filestore
 data/libodoo/sessions
+__pycache__/

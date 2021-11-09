@@ -19,6 +19,7 @@
     <field name="arch" type="xml">
       <tree>
         <field name="name" />
+        <field name="site" />
         <field name="place" />
         <field name="climatise" />
         <field name="troisd" />
@@ -37,6 +38,7 @@
         </group>
         <group>
           <field name="description" />
+          <field name="salles" />
         </group>
       </form>
     </field>
@@ -51,6 +53,7 @@
           <group>
             <field name="name" />
             <field name="place" />
+            <field name="site"/>
           </group>
           <group>
             <field name="climatise" />

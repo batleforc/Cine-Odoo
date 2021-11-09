@@ -5,11 +5,8 @@ class CineSite(models.Model):
     _name = 'om_cine.site'
     _description = 'om_cine.site'
 
-    name = fields.Char(string="Site name", required=True)
+    name = fields.Char(string="Nom du site", required=True)
     description = fields.Text()
-    address = fields.Char(string="Addres du site")
+    address = fields.Char(string="Adresse du site")
+    salles = fields.One2many('om_cine.salle',"site")
 
-    @api.depends('value')
-    def _value_pc(self):
-        for record in self:
-            record.value2 = float(record.value) / 100

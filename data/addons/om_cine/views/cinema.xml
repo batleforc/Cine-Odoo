@@ -8,62 +8,10 @@
       <tree>
         <field name="name" />
         <field name="address" />
-        <field name="description"/>
+        <field name="description" />
       </tree>
     </field>
   </record>
-
-  <record id="salle_tree" model="ir.ui.view">
-    <field name="name">om_cine.salle.tree</field>
-    <field name="model">om_cine.salle</field>
-    <field name="arch" type="xml">
-      <tree>
-        <field name="name" />
-        <field name="site" />
-        <field name="place" />
-        <field name="climatise" />
-        <field name="troisd" />
-      </tree>
-    </field>
-  </record>
-
-  <record id="site_form" model="ir.ui.view">
-    <field name="name">om_cine.site.form</field>
-    <field name="model">om_cine.site</field>
-    <field name="arch" type="xml">
-      <form>
-        <group>
-          <field name="name" />
-          <field name="address" />
-        </group>
-        <group>
-          <field name="description" />
-          <field name="salles" />
-        </group>
-      </form>
-    </field>
-  </record>
-
-  <record id="salle_form" model="ir.ui.view">
-    <field name="name">om_cine.salle.form</field>
-    <field name="model">om_cine.salle</field>
-    <field name="arch" type="xml">
-      <form>
-        <sheet>
-          <group>
-            <field name="name" />
-            <field name="place" />
-            <field name="site"/>
-          </group>
-          <group>
-            <field name="climatise" />
-            <field name="troisd" />
-          </group>
-        </sheet>
-      </form>
-    </field>
-  </record>
-
 
   <record id="site_action" model="ir.actions.act_window">
     <field name="name">site</field>
@@ -79,11 +27,29 @@
     <field name="view_mode">tree,kanban,form</field>
   </record>
 
+  <record id="film_action" model="ir.actions.act_window">
+    <field name="name">film</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">om_cine.film</field>
+    <field name="view_mode">tree,kanban,form</field>
+  </record>
+
+  <record id="seance_action" model="ir.actions.act_window">
+    <field name="name">seance</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">om_cine.seance</field>
+    <field name="view_mode">calendar,tree,kanban,form</field>
+  </record>
+
   <menuitem id="cine_root" name="Cinema" sequence="10" />
 
   <menuitem id="cine_site_root" name="Site" parent="cine_root" action="site_action" sequence="10" />
 
   <menuitem id="salle_site_root" name="Salle" parent="cine_root" action="salle_action" sequence="10" />
+
+  <menuitem id="film_root" name="Film" parent="cine_root" action="film_action" sequence="10" />
+
+  <menuitem id="seance_root" name="Seance" parent="cine_root" action="seance_action" sequence="10" />
 
 
 </odoo>

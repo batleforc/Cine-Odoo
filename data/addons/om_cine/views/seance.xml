@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+  <record id="seance_tree" model="ir.ui.view">
+    <field name="name">om_cine.seance.tree</field>
+    <field name="model">om_cine.seance</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="name" />
+        <field name="horaire_depart" />
+        <field name="horaire_fin" />
+        <field name="salle_name" />
+        <field name="site_name" />
+        <field name="film_name" />
+      </tree>
+    </field>
+  </record>
+
+  <record id="seance_cal" model="ir.ui.view">
+    <field name="name">om_cine.seance.cal</field>
+    <field name="model">om_cine.seance</field>
+    <field name="priority">0</field>
+    <field name="arch" type="xml">
+      <calendar color="salle" date_start="horaire_depart" date_stop="horaire_fin" quick_add="False">
+        <field name="film_name" />
+        <field name="site_name" />
+        <field name="salle_name" />
+        <field name="horaire_depart" />
+        <field name="horaire_fin" />
+      </calendar>
+    </field>
+  </record>
+</odoo>

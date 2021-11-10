@@ -5,8 +5,9 @@ class CineFilm(models.Model):
     _name = 'om_cine.film'
     _description = 'om_cine.film'
 
-    name = fields.Char(string="nom du Film", required=True)
+    name = fields.Char(string="Nom du Film", required=True)
     description = fields.Text()
     synopsis = fields.Text()
-    fournisseurs = fields.Char(string="fournisseurs du film")
-    duree = fields.Char(string="la durée du film")
+    fournisseurs = fields.Char(string="Fournisseurs du film")
+    duree = fields.Char(string="La durée du film")
+    sites = fields.Many2many(comodel_name='om_cine.site',relation='film_site_rel',column1='om_cine_site_id',column2='om_cine_film_id')

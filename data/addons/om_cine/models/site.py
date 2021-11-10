@@ -9,4 +9,5 @@ class CineSite(models.Model):
     description = fields.Text()
     address = fields.Char(string="Adresse du site")
     salles = fields.One2many('om_cine.salle',"site")
+    films = fields.Many2many(comodel_name='om_cine.film',relation='film_site_rel',column2='om_cine_site_id',column1='om_cine_film_id')
 

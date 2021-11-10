@@ -18,7 +18,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','website'],
+    'depends': ['base','website','calendar'],
     'installable': True,
     'application': True,
     'auto_install': False,
@@ -27,7 +27,12 @@
     'data': [
         # 'security/ir.model.access.csv',
         'views/cinema.xml',
+        'views/film.xml',
+        'views/salle.xml',
+        'views/seance.xml',
+        'views/site.xml',
         'views/templates.xml',
+        'views/a_la_une.xml',
         'security/ir.model.access.csv'
     ],
     # only loaded in demonstration mode

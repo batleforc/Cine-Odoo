@@ -1,0 +1,20 @@
+<odoo>
+
+    <template id="index">
+        <t t-call="website.layout">
+            <h1 t-set="title">Films a la une</h1>
+            <div class="oe_structure">
+                <div class="container">
+                    <t t-foreach="films" t-as="film">
+                        <div>
+                            <h2><t t-esc="film.name"/></h2>
+                            <p>synopsis : <t t-esc="film.synopsis"/></p>
+                            <p>durée : <t t-esc="film.duree"/></p>
+                        </div>
+                    </t>
+                </div>
+            </div>
+        </t>
+    </template>
+
+</odoo>

@@ -10,7 +10,7 @@ class CineSeance(models.Model):
     horaire_fin = fields.Datetime(string="Horaire de fin", required=True)
     site_id = fields.Many2one('om_cine.site', required=True)
     salle = fields.Many2one('om_cine.salle', domain="[('site','=',site_id)]", required=True)
-    film = fields.Many2one('om_cine.film', domain="[('site','=',site_id)]" ,required=True)
+    film = fields.Many2one('om_cine.film', domain="[('sites','=',site_id)]" ,required=True)
     event = fields.Many2one('event.event',required=True)
     salle_name = fields.Char(string="Nom de la salle", tracking=True, related="salle.name")
     site_name = fields.Char(string="Nom du site", tracking=True, related="site_id.name")

@@ -6,6 +6,10 @@
             <div class="oe_structure">
                 <div class="container">
                     <t t-foreach="films" t-as="film">
+                        <!--Mettre en relatif pour avoir l'image à gauche et le texte à droite-->
+                        <div>
+                            image ici
+                        </div>
                         <div>
                             <h2><t t-esc="film.name"/></h2>
                             <p>synopsis : <t t-esc="film.synopsis"/></p>

@@ -33,7 +33,8 @@
         'views/site.xml',
         'views/templates.xml',
         'views/a_la_une.xml',
-        'security/ir.model.access.csv'
+        'security/ir.model.access.csv',
+        'security/security.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

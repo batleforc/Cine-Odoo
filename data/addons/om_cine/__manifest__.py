@@ -32,7 +32,10 @@
         'views/seance.xml',
         'views/site.xml',
         'views/templates.xml',
-        'views/a_la_une.xml',
+        'views/template_web/a_la_une.xml',
+        'views/template_web/site_choix_seance.xml',
+        'views/template_web/film_choix_site.xml',
+        'views/template_web/a_la_une.xml',
         'security/ir.model.access.csv',
         'security/security.xml'
     ],

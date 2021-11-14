@@ -1,0 +1,30 @@
+<odoo>
+
+    <template id="seances">
+        <t t-call="website.layout">
+            <h1 t-set="title">Seance disponible :</h1>
+            <div class="oe_structure">
+                <div class="container">
+                    <div class="card-deck">
+                        <t t-foreach="seances" t-as="seance">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <t t-esc="seance.name" />
+                                    </h5>
+                                    <p class="card-text">
+                                        Horaire :
+                                        <t t-esc="seance.horaire_depart" />
+                                        - 
+                                        <t t-esc="seance.horaire_fin" />
+                                    </p>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+</odoo>

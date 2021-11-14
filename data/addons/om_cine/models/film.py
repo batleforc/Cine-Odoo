@@ -11,3 +11,4 @@ class CineFilm(models.Model):
     fournisseurs = fields.Char(string="Fournisseurs du film")
     duree = fields.Char(string="La durée du film")
     sites = fields.Many2many(comodel_name='om_cine.site',relation='film_site_rel',column1='om_cine_site_id',column2='om_cine_film_id')
+    affiche = fields.Image()

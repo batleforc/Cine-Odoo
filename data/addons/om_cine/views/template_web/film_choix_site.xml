@@ -1,0 +1,29 @@
+<odoo>
+
+    <template id="sites">
+        <t t-call="website.layout">
+            <h1 t-set="title">Site disponible :</h1>
+            <div class="oe_structure">
+                <div class="container">
+                    <div class="card-deck">
+                        <t t-foreach="sites" t-as="site">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <t t-esc="site.name" />
+                                    </h5>
+                                    <p class="card-text">
+                                        Adresse : 
+                                        <t t-esc="site.address" />
+                                    </p>
+                                    <a t-att-href="('/seances?FilmId=%s&amp;SiteId=%s' % (filmId, site.id))" class="btn btn-primary">Sceances disponibles</a>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+</odoo>

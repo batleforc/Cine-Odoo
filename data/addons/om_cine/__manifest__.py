@@ -18,7 +18,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','website','calendar'],
+    'depends': ['base','website','calendar','sale_management','account','website_sale','hr','website_event','calendar'],
     'installable': True,
     'application': True,
     'auto_install': False,

@@ -1,3 +1,4 @@
 data/bdd
 data/libodoo/
 __pycache__/
+bdd/

@@ -22,3 +22,5 @@ services:
       - POSTGRES_USER=odoo
     volumes:
       - ./data/bdd:/var/lib/postgresql/data/
+    ports:
+    - "5432:5432"

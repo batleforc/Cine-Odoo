@@ -1,0 +1,39 @@
+<odoo>
+
+    <template id="index">
+        <t t-call="website.layout">
+            <h1 t-set="title">Films a la une</h1>
+            <div class="oe_structure">
+                <div class="container">
+                    <div class="card-deck">
+                        <t t-foreach="films" t-as="film">
+                            <div class="card" style="width: 18rem;">
+                                <t t-if="film.affiche">
+                                    <img t-att-src="image_data_uri (film.affiche)" alt="affiche"/>
+                                </t>
+                                <t t-if="not film.affiche">
+                                    <img alt="film.name" class="card-img-top" src="https://www.timeoutdubai.com/cloud/timeoutdubai/2021/09/11/hfpqyV7B-IMG-Dubai-UAE-1200x800.jpg" />
+                                </t>
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <t t-esc="film.name" />
+                                    </h5>
+                                    <p class="card-text">
+                                        synopsis :
+                                        <t t-esc="film.synopsis" />
+                                    </p>
+                                    <p class="card-text">
+                                        durée :
+                                        <t t-esc="film.duree" />
+                                    </p>
+                                    <a t-att-href="('/sites?FilmId=%s' % film.id)" class="btn btn-primary">Sites disponibles</a>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+</odoo>

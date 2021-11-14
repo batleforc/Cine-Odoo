@@ -18,6 +18,7 @@
                                         - 
                                         <t t-esc="seance.horaire_fin" />
                                     </p>
+                                    <a t-att-href="('/event/%s-%s/register' % (seance.event.name.replace(' ', '-'), seance.event.id))" class="btn btn-primary">Commander Ticket</a>
                                 </div>
                             </div>
                         </t>

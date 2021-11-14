@@ -12,6 +12,7 @@
         <field name="fournisseurs" />
         <field name="duree" />
         <field name="sites" />
+        <field name="affiche" />
       </tree>
     </field>
   </record>
@@ -22,6 +23,9 @@
     <field name="arch" type="xml">
       <form>
         <sheet>
+          <group>
+            <field name="affiche" />
+          </group>
           <group>
             <field name="name" />
             <field name="fournisseurs" />
